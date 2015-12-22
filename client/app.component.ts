@@ -2,7 +2,7 @@ import {Component} from 'angular2/core';
 
 @Component({
 	selector: 'gclone-app',
-	template: '<h1>Done awesomely</h1>'
+	templateUrl: './client/app.template.html'
 })
 
 export class AppComponent {
