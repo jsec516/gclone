@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <base href="/">
     <title>Gmail Clone App</title>
-    
+
 
     <!-- 1. Load libraries -->
     <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     <script src="node_modules/rxjs/bundles/Rx.js"></script>
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
-
+    <script src="node_modules/angular2/bundles/router.dev.js"></script>
     <!-- 2. Configure SystemJS -->
     <script>
       System.config({
@@ -27,7 +28,7 @@
       System.import('client/boot')
             .then(null, console.error.bind(console));
     </script>
-    
+
     <!-- Load css -->
     <link href="client/assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> 
@@ -47,6 +48,10 @@
   <!-- 3. Display the application -->
   <body>
     <gclone-app>Loading...</gclone-app>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="client/assets/js/bootstrap.min.js"></script>
   </body>
 
 </html>
