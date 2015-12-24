@@ -29,7 +29,7 @@ System.register(['angular2/core', 'angular2/router', './inbox-list.component'], 
                 }
                 InboxComponent = __decorate([
                     core_1.Component({
-                        template: "\n    <h1>Something From Inbox</h1>\n\t<router-outlet></router-outlet>\n  ",
+                        templateUrl: './client/inbox/inbox-list.template.html',
                         directives: [router_1.RouterOutlet]
                     }),
                     router_1.RouteConfig([

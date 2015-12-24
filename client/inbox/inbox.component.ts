@@ -6,11 +6,8 @@ import {InboxListComponent}   from './inbox-list.component';
 // import {InboxService}         from './inbox.service';
 
 @Component({
-  template: `
-    <h1>Something From Inbox</h1>
-	<router-outlet></router-outlet>
-  `,
-	directives: [RouterOutlet]
+	templateUrl: './client/inbox/inbox-list.template.html',
+  	directives: [RouterOutlet]
 })
 
 @RouteConfig([
