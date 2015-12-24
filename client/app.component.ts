@@ -7,7 +7,7 @@ import {InboxComponent} from './inbox/inbox.component';
 @Component({
 	selector: 'gclone-app',
 	templateUrl: './client/app.template.html',
-	directives: [ROUTER_DIRECTIVES]
+  directives: [ROUTER_DIRECTIVES]
 })
 
 @RouteConfig([

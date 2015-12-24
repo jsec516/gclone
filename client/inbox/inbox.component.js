@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', './inbox-list.component'], function(exports_1) {
+System.register(['angular2/core', 'angular2/router', './inbox-list.component', './inbox.service'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,7 +8,7 @@ System.register(['angular2/core', 'angular2/router', './inbox-list.component'], 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, inbox_list_component_1;
+    var core_1, router_1, inbox_list_component_1, inbox_service_1;
     var InboxComponent;
     return {
         setters:[
@@ -20,22 +20,31 @@ System.register(['angular2/core', 'angular2/router', './inbox-list.component'], 
             },
             function (inbox_list_component_1_1) {
                 inbox_list_component_1 = inbox_list_component_1_1;
+            },
+            function (inbox_service_1_1) {
+                inbox_service_1 = inbox_service_1_1;
             }],
         execute: function() {
             // import {EmailDetailComponent} from '../email-detail.component';
-            // import {InboxService}         from './inbox.service';
             InboxComponent = (function () {
-                function InboxComponent() {
+                function InboxComponent(_service) {
+                    this._service = _service;
                 }
+                InboxComponent.prototype.ngOnInit = function () {
+                    var _this = this;
+                    this.emails = [];
+                    this._service.getEmails().subscribe(function (emails) { _this.emails = emails; });
+                };
                 InboxComponent = __decorate([
                     core_1.Component({
                         templateUrl: './client/inbox/inbox-list.template.html',
-                        directives: [router_1.RouterOutlet]
+                        directives: [router_1.RouterOutlet],
+                        providers: [inbox_service_1.InboxService],
                     }),
                     router_1.RouteConfig([
                         { path: '/', name: 'Inbox', component: inbox_list_component_1.InboxListComponent, useAsDefault: true }
                     ]), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [inbox_service_1.InboxService])
                 ], InboxComponent);
                 return InboxComponent;
             })();
