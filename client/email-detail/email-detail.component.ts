@@ -8,22 +8,17 @@ import {Email, EmailService} from '../email.service';
 })
 
 export class EmailDetailComponent  implements OnInit { 
-	// public emails: Email[];
+
 	public email: Email;
+
 	constructor(
 	 	private _router:Router,
 		private _routeParams:RouteParams,
 		private _service: EmailService
-	){
-		// let id = this._routeParams.get('id');
-		// this._service.getEmailById(id).subscribe(email => { this.email = email[0]; });
-	}
+	){}
 
 	ngOnInit() {
-		console.log("Callend ngOnInit")
 		let id = this._routeParams.get('id');
-		console.log(id);
-		// this.email = id;
 		this._service.getEmailById(id).subscribe(email => { return this.email = email[0]; });
 	}
 }

@@ -27,15 +27,10 @@ System.register(['angular2/core', 'angular2/router', '../email.service'], functi
                     this._router = _router;
                     this._routeParams = _routeParams;
                     this._service = _service;
-                    // let id = this._routeParams.get('id');
-                    // this._service.getEmailById(id).subscribe(email => { this.email = email[0]; });
                 }
                 EmailDetailComponent.prototype.ngOnInit = function () {
                     var _this = this;
-                    console.log("Callend ngOnInit");
                     var id = this._routeParams.get('id');
-                    console.log(id);
-                    // this.email = id;
                     this._service.getEmailById(id).subscribe(function (email) { return _this.email = email[0]; });
                 };
                 EmailDetailComponent = __decorate([

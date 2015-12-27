@@ -11,17 +11,19 @@ import {Email, InboxService}  from './inbox.service';
 	providers: [InboxService],
 })
 
-@RouteConfig([
-	{ path: '/', name: 'Inbox', component: InboxListComponent, useAsDefault: true} 
-])
+// @RouteConfig([
+// 	{ path: '/', name: 'Inbox', component: InboxListComponent, useAsDefault: true} 
+// ])
 
 export class InboxComponent implements OnInit{ 
-	// public emails: Email[];
-	emails: Email[];
+
+	public emails: Email[];
+	
 	constructor(
 		private _router: Router,
 		private _service: InboxService
 	){}
+
 	ngOnInit() {
 		this.emails = [];
 		this._service.getEmails().subscribe(emails => { this.emails = emails })
