@@ -18,17 +18,22 @@ import {EmailDetailComponent} from './email-detail/email-detail.component';
     useAsDefault: true
   },*/
   
-  { path: '/inbox', name: 'Inbox', component: InboxComponent},
-  { path: '/email/:id', name: 'EmailDetail', component: EmailDetailComponent}
+    { path: '/inbox', name: 'Inbox', component: InboxComponent, useAsDefault: true},
+    { path: '/email/:id', name: 'EmailDetail', component: EmailDetailComponent}
 ])
 
 export class AppComponent {
 	
+  public composeStatus: boolean;
+
   constructor(
     private _router: Router
-  ){}
+  ){
+    this.composeStatus = false;
+  }
 
 	onCompose(){
     // this._router.navigate(['EmailDetail', { id: email.id }]);
+    this.composeStatus = true;
   }
 }

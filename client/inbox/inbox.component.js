@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', './inbox.service'], function(exports_1) {
+System.register(['angular2/core', 'angular2/router', '../email.service'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,7 +8,7 @@ System.register(['angular2/core', 'angular2/router', './inbox.service'], functio
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, inbox_service_1;
+    var core_1, router_1, email_service_1;
     var InboxComponent;
     return {
         setters:[
@@ -18,8 +18,8 @@ System.register(['angular2/core', 'angular2/router', './inbox.service'], functio
             function (router_1_1) {
                 router_1 = router_1_1;
             },
-            function (inbox_service_1_1) {
-                inbox_service_1 = inbox_service_1_1;
+            function (email_service_1_1) {
+                email_service_1 = email_service_1_1;
             }],
         execute: function() {
             InboxComponent = (function () {
@@ -39,9 +39,9 @@ System.register(['angular2/core', 'angular2/router', './inbox.service'], functio
                     core_1.Component({
                         templateUrl: './client/inbox/inbox-list.template.html',
                         directives: [router_1.RouterOutlet],
-                        providers: [inbox_service_1.InboxService],
+                        providers: [email_service_1.EmailService],
                     }), 
-                    __metadata('design:paramtypes', [router_1.Router, inbox_service_1.InboxService])
+                    __metadata('design:paramtypes', [router_1.Router, email_service_1.EmailService])
                 ], InboxComponent);
                 return InboxComponent;
             })();

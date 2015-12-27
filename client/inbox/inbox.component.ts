@@ -1,12 +1,12 @@
 import {Component, OnInit}     from 'angular2/core';
 import {RouteConfig, RouterOutlet, Router} from 'angular2/router';
 import {InboxListComponent}   from './inbox-list.component';
-import {Email, InboxService}  from './inbox.service';
+import {Email, EmailService}  from '../email.service';
 
 @Component({
 	templateUrl: './client/inbox/inbox-list.template.html',
   	directives: [RouterOutlet],
-	providers: [InboxService],
+	providers: [EmailService],
 })
 
 // @RouteConfig([
@@ -19,7 +19,7 @@ export class InboxComponent implements OnInit{
 	
 	constructor(
 		private _router: Router,
-		private _service: InboxService
+		private _service: EmailService
 	){}
 
 	ngOnInit() {
