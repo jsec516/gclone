@@ -22,7 +22,6 @@ System.register(['angular2/core', 'angular2/router', './inbox.service'], functio
                 inbox_service_1 = inbox_service_1_1;
             }],
         execute: function() {
-            // import {EmailDetailComponent} from '../email-detail.component';
             InboxComponent = (function () {
                 function InboxComponent(_router, _service) {
                     this._router = _router;
