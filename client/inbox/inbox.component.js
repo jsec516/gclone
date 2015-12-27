@@ -27,13 +27,17 @@ System.register(['angular2/core', 'angular2/router', './inbox-list.component', '
         execute: function() {
             // import {EmailDetailComponent} from '../email-detail.component';
             InboxComponent = (function () {
-                function InboxComponent(_service) {
+                function InboxComponent(_router, _service) {
+                    this._router = _router;
                     this._service = _service;
                 }
                 InboxComponent.prototype.ngOnInit = function () {
                     var _this = this;
                     this.emails = [];
                     this._service.getEmails().subscribe(function (emails) { _this.emails = emails; });
+                };
+                InboxComponent.prototype.onSelect = function (email) {
+                    this._router.navigate(['EmailDetail', { id: email.id }]);
                 };
                 InboxComponent = __decorate([
                     core_1.Component({
@@ -44,7 +48,7 @@ System.register(['angular2/core', 'angular2/router', './inbox-list.component', '
                     router_1.RouteConfig([
                         { path: '/', name: 'Inbox', component: inbox_list_component_1.InboxListComponent, useAsDefault: true }
                     ]), 
-                    __metadata('design:paramtypes', [inbox_service_1.InboxService])
+                    __metadata('design:paramtypes', [router_1.Router, inbox_service_1.InboxService])
                 ], InboxComponent);
                 return InboxComponent;
             })();

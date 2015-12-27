@@ -18,7 +18,7 @@
                         <i *ngIf="!email.isImportant" class="material-icons outline-icon">label_outline</i>
                     </div>
                     <div class="col-sm-2 freelancer">
-                        <h5><a href="">{{ email.from }}</a></h5>
+                        <h5 class="awesome"><a (click)="onSelect(email)">{{ email.from }}</a></h5>
                     </div>
                     <div class="col-sm-8 email-text">
                         <h5>{{ email.subject }}</h5>

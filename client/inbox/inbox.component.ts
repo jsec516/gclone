@@ -1,5 +1,5 @@
 import {Component, OnInit}     from 'angular2/core';
-import {RouteConfig, RouterOutlet} from 'angular2/router';
+import {RouteConfig, RouterOutlet, Router} from 'angular2/router';
 import {InboxListComponent}   from './inbox-list.component';
 import {Email, InboxService}  from './inbox.service';
 // import {EmailDetailComponent} from '../email-detail.component';
@@ -17,8 +17,9 @@ import {Email, InboxService}  from './inbox.service';
 
 export class InboxComponent implements OnInit{ 
 	// public emails: Email[];
-	emails: Object[];
+	emails: Email[];
 	constructor(
+		private _router: Router,
 		private _service: InboxService
 	){}
 	ngOnInit() {
@@ -26,4 +27,7 @@ export class InboxComponent implements OnInit{
 		this._service.getEmails().subscribe(emails => { this.emails = emails })
 	}
 	
+	onSelect(email: Email){
+		this._router.navigate(['EmailDetail', { id: email.id }]);
+	}
 }

@@ -21,7 +21,7 @@ System.register(['angular2/core'], function(exports_1) {
                 }
                 InboxListComponent = __decorate([
                     core_1.Component({
-                        template: "\n    <h2>HEROES</h2>\n    \n  "
+                        template: "\n    \n    \n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], InboxListComponent);
