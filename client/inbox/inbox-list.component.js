@@ -32,4 +32,3 @@ System.register(['angular2/core'], function(exports_1) {
         }
     }
 });
-//# sourceMappingURL=inbox-list.component.js.map

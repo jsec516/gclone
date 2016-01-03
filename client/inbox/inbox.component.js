@@ -49,4 +49,3 @@ System.register(['angular2/core', 'angular2/router', '../email.service'], functi
         }
     }
 });
-//# sourceMappingURL=inbox.component.js.map

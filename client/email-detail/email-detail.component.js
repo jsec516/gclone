@@ -46,4 +46,3 @@ System.register(['angular2/core', 'angular2/router', '../email.service'], functi
         }
     }
 });
-//# sourceMappingURL=email-detail.component.js.map

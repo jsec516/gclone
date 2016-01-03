@@ -58,4 +58,3 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/add/operator/map'], fun
 // 	new Email(13, false, 'freelancer.com', 'what are you waiting for?', 'My Bonnie lies over the ocean.My Bonnie lies over the ocean.', '2:40pm')
 // ]
 // var emailPromise = Promise.resolve(EMAILS); 
-//# sourceMappingURL=inbox.service.js.map
