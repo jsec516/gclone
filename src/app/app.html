@@ -1,0 +1,115 @@
+<div class="container-fluid">
+    <div class="row banner">
+        <div class="col-sm-2 logo-container">
+            <div class="background logo"> 
+            </div>
+        </div>
+        <div class="col-sm-6 search-form">
+            <form class="form-inline">
+                <div class="form-group search-container">
+                    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control search-box" id="exampleInputsearch" style="width: 590px; height: 30px; border-radius:0px; inherit;box-shadow: none;">
+                        <div class="input-group-addon search-icon" style="width: 60px; border-radius:2px;"><i class="fa fa-search"></i></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-4 right-banner">
+            <span>Jahidul</span>
+            <div class="background google-app">
+            </div>
+            <div class="background notification">
+            </div>
+            <div class="background google-account">
+            </div>
+        </div>
+    </div>
+    <div class="row button-container">
+        <div class="col-sm-2 gmail-button"> 
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Gmail
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">gmail</a></li>
+                    <li><a href="#">contacts</a></li>
+                    <li><a href="#">tasks</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-10 button-menu"> 
+            <div class="left-button-menu">
+                <div class="checkbox checkbox-1">
+                    <div class="check">
+                        
+                    </div>
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <div class="refresh-icon">
+                    <i class="fa fa-repeat"></i>
+                </div>
+                <div class="dropdown more-button">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        more
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">gmail</a></li>
+                        <li><a href="#">contacts</a></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="right-button-menu">
+                <span><b>1</b>-<b>50</b> of <b>199</b></span>
+                <div class="new-old-icon">
+                    <i class="fa fa-angle-left left-angle"></i>
+                    <i class="fa fa-angle-right"></i>
+                </div>
+                <div class="settings">
+                    <i class="fa fa-cog cog"></i> 
+                    <i class="fa fa-caret-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2 left-side">
+            <h5><a href="">COMPOSE</a></h5>
+            <div class="left-menu">
+                <ul style="list-style:none; padding-left:0px;">
+                    <li class="inbox-group inbox"><a href="">Inbox (18)</a> <span class="drop-arrow"></span></li>
+                    <li><a href="">Starred</a></li>
+                    <li><a href="">Important</a></li>
+                    <li><a href="">Sent Mail</a></li>
+                    <li class="inbox-group draft"><a href="">Drafts (9)</a><span class="drop-arrow"></span></li>
+                    <li class="inbox-group circle"><i class="fa fa-caret-down"></i><a href="">Circles</a><span class="drop-arrow"></span></li>
+                    <li class="inbox-group friends"><i class="fa fa-circle-thin"></i><a href="">Friends</a><span class="drop-arrow"></span></li>
+                    <li class="inbox-group family"><i class="fa fa-circle-thin"></i><a href="">Family</a><span class="drop-arrow"></span></li>
+                    <li class="inbox-group acquaintences"><i class="fa fa-circle-thin"></i><a href="">Acquaintences</a><span class="drop-arrow"></span></li>
+                    <li class="inbox-group following"><i class="fa fa-circle-thin"></i><a href="">Following</a><span class="drop-arrow"></span></li>
+                    <li class="inbox-group freelancer-arrow"><a href="">Freelancer</a><span class="drop-arrow"></span></li>
+                    <li class="more"><a href="">More</a> <i class="fa fa-caret-down"></i></li>
+                    <li class="search-jahidul">
+                    <label class="background google-account">
+                    </label>
+                    <a href="">jahidul</a> <i class="fa fa-caret-down"></i>
+                    <span class="search"><i class="fa fa-search"></i></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-10 main-body">
+            <div class="row" style="margin-top:10px; padding-left:15px; padding-right:15px;">
+                <div class="col-sm-12 main-content">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

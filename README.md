@@ -1,155 +1,234 @@
-# A2B4O2OM
-#### Angular 2, Bootstrap 4, OAuth2, oh my!
-Angular 2 skeleton app with Bootstrap 4 and OAuth2 integration, all packaged up and served with Webpack
+[![taylor swift](https://img.shields.io/badge/secured%20by-taylor%20swift-brightgreen.svg)](https://twitter.com/SwiftOnSecurity)
+[![volkswagen status](https://auchenberg.github.io/volkswagen/volkswargen_ci.svg?v=1)](https://github.com/auchenberg/volkswagen) [![GitHub version](https://badge.fury.io/gh/angularclass%2Fangular2-webpack-starter.svg)](https://badge.fury.io/gh/angularclass%2Fangular2-webpack-starter) [![Dependency Status](https://david-dm.org/angularclass/angular2-webpack-starter.svg)](https://david-dm.org/angularclass/angular2-webpack-starter)
+[![Issue Stats](http://issuestats.com/github/angularclass/angular2-webpack-starter/badge/pr?style=flat)](http://issuestats.com/github/angularclass/angular2-webpack-starter)
+[![Issue Stats](http://issuestats.com/github/angularclass/angular2-webpack-starter/badge/issue?style=flat)](http://issuestats.com/github/angularclass/angular2-webpack-starter) [![Stack Share](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](http://stackshare.io/angularclass/angular-2-webpack-starter)
 
-## Introduction
+<p align="center">
+  <a href="https://angularclass.com" target="_blank">
+    <img src="https://cloud.githubusercontent.com/assets/1016365/9863762/a84fed4a-5af7-11e5-9dde-d5da01e797e7.png" alt="Webpack and Angular 2" width="500" height="320"/>
+  </a>
+</p>
 
-This application is meant to be a starting point for you to work with Angular 2 and OAuth2, with the added benefits of itegrating the upcoming Bootstrap 4 (in alpha as this project was started) and packaging everything in an easy to use system through the use of Webpack.
+# Angular2 Webpack Starter [![Join Slack](https://img.shields.io/badge/slack-join-brightgreen.svg)](https://angularclass.com/slack-join) [![Join the chat at https://gitter.im/angularclass/angular2-webpack-starter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/angularclass/angular2-webpack-starter?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-There are some basic Grunt tasks defined that will help you create custom builds of Bootstrap or to change the configuration of your application's OAuth2 config. More tasks will be added as the needs surface.
 
-## Getting started
+> An Angular 2 starter kit featuring [Angular 2](https://angular.io) ([Router](https://angular.io/docs/js/latest/api/router/), [Forms](https://angular.io/docs/js/latest/api/forms/),
+[Http](https://angular.io/docs/js/latest/api/http/),
+[Services](https://gist.github.com/gdi2290/634101fec1671ee12b3e#_follow_@AngularClass_on_twitter),
+[Tests](https://angular.io/docs/js/latest/api/test/), [E2E](https://angular.github.io/protractor/#/faq#what-s-the-difference-between-karma-and-protractor-when-do-i-use-which-)), [Karma](https://karma-runner.github.io/), [Protractor](https://angular.github.io/protractor/), [Jasmine](https://github.com/jasmine/jasmine), [Istanbul](https://github.com/gotwarlost/istanbul), [TypeScript](http://www.typescriptlang.org/), [Typings](https://github.com/typings/typings), and [Webpack](http://webpack.github.io/) by [AngularClass](https://angularclass.com).
 
-To get started with A2B4O2OM you will need to clone the repository to your local machine and `cd` into it:
+> If you're looking for Angular 1.x please use [NG6-starter](https://github.com/angularclass/NG6-starter)  
+> If you're looking to learn about Webpack and ES6 Build Tools check out [ES6-build-tools](https://github.com/AngularClass/ES6-build-tools)
 
-    git clone https://github.com/michaeloryl/angular2-bootstrap4-oauth2-webpack.git
-    cd angular2-bootstrap4-oauth2-webpack
+This seed repo serves as an Angular 2 starter for anyone looking to get up and running with Angular 2 and TypeScript fast. Using a [Webpack](http://webpack.github.io/) for building our files and assisting with boilerplate. We're also using Protractor for our end-to-end story and Karma for our unit tests.
+* Best practices in file and application organization for Angular 2.
+* Ready to go build system using Webpack for working with TypeScript.
+* Angular 2 examples that are ready to go when experimenting with Angular 2.
+* A great Angular 2 seed repo for anyone who wants to start their project.
+* Testing Angular 2 code with Jasmine and Karma.
+* Coverage with Istanbul and Karma
+* End-to-end Angular 2 code using Protractor.
+* Type manager with Typings
 
-Once that has been done, you will need to ensure that you have Node.js already installed.  You can download it from the [Node.js website](https://nodejs.org/en/download/).  I've developed this with the 0.12.x branch, but the newer branches should work as well.
+### Quick start
+> Clone/Download the repo then edit `app.ts` inside [`/src/app/app.ts`](/src/app/app.ts)
 
-Installing Node.js will have the side-effect of installing `npm`, which you will use to download and install all of the application's dependencies.  You can do that by running the following command from the main project folder.
+```bash
+# clone our repo
+# --depth 1 removes all but one .git commit history
+git clone --depth 1 https://github.com/angularclass/angular2-webpack-starter.git
 
-```
+# change directory to our repo
+cd angular2-webpack-starter
+
+# install the repo with npm
 npm install
+
+# install TypeScript typings
+./node_modules/.bin/typings install
+
+# start the server
+npm start
+```
+go to [http://0.0.0.0:3000](http://0.0.0.0:3000) or [http://localhost:3000](http://localhost:3000) in your browser
+
+# Table of Contents
+* [File Structure](#file-structure)
+* [Getting Started](#getting-started)
+    * [Dependencies](#dependencies)
+    * [Installing](#installing)
+    * [Running the app](#running-the-app)
+* [Contributing](#contributing)
+* [TypeScript](#typescript)
+* [Frequently asked questions](#frequently-asked-questions)
+* [Support, Questions, or Feedback](#support-questions-or-feedback)
+* [License](#license)
+
+
+## File Structure
+We use the component approach in our starter. This is the new standard for developing Angular apps and a great way to ensure maintainable code by encapsulation of our behavior logic. A component is basically a self contained app usually in a single file or a folder with each concern as a file: style, template, specs, e2e, and component class. Here's how it looks:
+```
+angular2-webpack-starter/
+ ├──src/                       * our source files that will be compiled to javascript
+ |   ├──main.ts                * our entry file for our browser environment
+ │   │
+ |   ├──index.html             * Index.html: where we generate our index page
+ │   │
+ |   ├──vendor.ts              * our vendor file
+ │   │
+ │   ├──app/                   * WebApp: folder
+ │   │   ├──app.spec.ts        * a simple test of components in app.ts
+ │   │   └──app.ts             * App.ts: a simple version of our App component components
+ │   │
+ │   └──assets/                * static assets are served here
+ │       ├──icon/              * our list of icons from www.favicon-generator.org
+ │       ├──service-worker.js  * ignore this. Web App service worker that's not complete yet
+ │       ├──robots.txt         * for search engines to crawl your website
+ │       └──human.txt          * for humans to know who the developers are
+ │
+ ├──test/                      * this is our global unit tests and end-to-end tests
+ │
+ ├──spec-bundle.js             * ignore this magic that sets up our angular 2 testing environment
+ ├──karma.config.js            * karma config for our unit tests
+ ├──protractor.config.js       * protractor config for our end-to-end tests
+ │
+ ├──tsconfig.json              * config that webpack uses for typescript
+ ├──typings.json               * our typings manager
+ ├──package.json               * what npm uses to manage it's dependencies
+ │
+ ├──webpack.config.js          * our development webpack config
+ ├──webpack.test.config.js     * our testing webpack config
+ └──webpack.prod.config.js     * our production webpack config
 ```
 
-You will also need to install one package globally so that you can run it from the command line:
+# Getting Started
+## Dependencies
+What you need to run this app:
+* `node` and `npm` (`brew install node`)
+* Ensure you're running the latest versions Node `v4.1.x`+ and NPM `2.14.x`+
 
-```
-npm install -g webpack-dev-server
-```
+Once you have those, you should install these globals with `npm install --global`:
+* `webpack` (`npm install --global webpack`)
+* `webpack-dev-server` (`npm install --global webpack-dev-server`)
+* `karma` (`npm install --global karma-cli`)
+* `protractor` (`npm install --global protractor`)
+* `typings` (`npm install --global typings`)
+* `typescript` (`npm install --global typescript`)
 
-Now that you have the dependencies installed, you should be able to run the applcation with the following command:
+## Installing
+* `fork` this repo
+* `clone` your fork
+* `npm install` to install all dependencies
+* `typings install` to install necessary typings
+* `npm run server` to start the dev server in another tab
 
-```
-webpack-dev-server
-````
+## Running the app
+After you have installed all dependencies you can now run the app. Run `npm run server` to start a local server using `webpack-dev-server` which will watch, build (in-memory), and reload for you. The port will be displayed to you as `http://0.0.0.0:3000` (or if you prefer IPv6, if you're using `express` server, then it's `http://[::1]:3000/`).
 
-That will compile all of the project's TypeScript (ECMAScript 2015) files into ES5 JavaScript, bundle them with your various internal and external depenencies, and launch them inside a server running on port 3000.  You can then hit [http://localhost:3000/](http://localhost:3000/) to see the application running on your machine.
-
-By default it will be configured to integrate with a sample Google OAuth2 client I've configured.  That client will ask for permission to access your basic profile information so that it can show your name on the logout button.  If you want to see that in action, just hit the `Login` button in the upper right hand corner of the webapp.
-
-## Changing config environment
-
-A2B4O2OM currently uses a rudimentary environment-based config system that allows you to have different OAuth2 configurations setup for running locally, in dev, in test, or in production.  There's also one for using my demo Google OAuth2 credentials.  These Grunt tasks will copy the appropriate file from `config/` and overwrite the `config.json` file in the `src/` folder, with predjudice.
-
-Choose one of the following commands based upon the environment you wish to load in the source code.
-
-```
-grunt env:local
-grunt env:dev
-grunt env:test
-grunt env:prod
-grunt env:google
-```
-
-Use the Google environment if you just want to see OAuth2 in action and you don't have your own server configured.  The other files will have to be updated by you, the user, to work with your own OAuth2 infrastructure.
-
-## Configuring for OAuth2
-
-You'll find several config files in the `/config` folder of the project.  The `config.local.json` file, for example, looks similar to the following:
-
-```
-{
-  "callbackUrl": "http://localhost:3000/auth/callback",
-  "implicitGrantUrl": "http://localhost:3001/auth?redirect_uri=__callbackUrl__&response_type=token&client_id=__clientId__&scope=__scopes__",
-  "userInfoUrl": "http://localhost:3001/userinfo",
-  "userInfoNameField": "nameOfFullnameField",
-  "clientId": "a2o2demo",
-  "scopes": "yourscopes+gohere"
-}
-```
-It is configured as if you had an OAuth2 server running on port 3001 of your local machine.  I'll explain what each entry in the file means.
-
-`callbackUrl` is the URL that the OAuth2 server should redirect the user to so that our application can fetch the access token from the browser window.  This **must** be using the same domain, subdomain, protocol, and port as your main A2B4O2OM application, otherwise the app will be restricted by the browser from accessing the popup browser window.
-
-`implicitGrantUrl` is the main authorization URL of the OAuth2 server in use.  The `__callbackUrl__`, `__clientId__`, and `__scopes__` tokens in the value get replaced with the actual values you configure in this JSON config file.  This allows you to keep things easy to read while still allowing you to change the format of the URL easily.
-
-A2B4O2OM is configured for using an OAuth2 Implicit grant type request, which means it gets an access token directly and has no option for a refresh token.  Storing refresh tokens and client secrets in a client-side JavaScript application is a **very bad thing**, which is why we don't use the Authorization Code grant type.
-
-`userInfoUrl` is the OAuth2 URL to use to gain access to a user's basic information.  The access token will be inserted into the headers of the request as a bearer token in an Authorization header.
-
-`userInfoNameField` is the name of the full name field in the JSON payload returned by the `userInfoUrl` endpoint.  Google calls it 'displayName', my personal server calls it 'name'.  Hence the reason to have it configurable.
-
-`clientId` is the ID assigned to your new application by the OAuth2 administrator.  There's no need for the associated client secret (password) in our use case.
-
-`scopes` is the list of '+' separated scopes of data you are requesting.  This will be different for each OAuth2 server you come across, most likely.
-## Deploying the code
-
-If you wish to deploy your application to a real web server, production or otherwise, you can use the appropriate grunt tasks to do so.  To build a test/dev build of the site, run the following command:
-
-```
-grunt build
+### server
+```bash
+# development
+npm run server
+# production
+npm run build:prod
+npm run server:prod
 ```
 
-If you require a production ready version of the application that has debugging disabled and has been uglified, then use this command instead:
+## Other commands
 
-```
-grunt build:prod
-```
-
-Note that the prod build command will also do a 'grunt env:prod' to copy `config/config.prod.json` to `src/config.json` before running webpack and building the ZIP file.  If you wish to continue in a non-prod environment after building for prod, you will need to execute the appropriate Grunt `env` command (`env:dev`, `env:local`, `env:test`)
-
-## Customizing Bootstrap 4
-
-By default, A2B4O2OM ships with a slightly customized version of Bootstrap 4 that differs from what ships in the NPM.  That's why you will find it residing in the separate `/bootstrap` folder instead of in `/NODE_MODULES`.
-
-The changes can be found in `/bootstrap/scss/_variables.scss`, which is the main config file used when Building Bootstrap 4.  The changes I've made are the following.
-
-The first four modifications change the general look of the framework.  Shadows are necessary for the navbar's look to work, and the others are just things I find generally pleasing.
-
-```
-$enable-shadows:            true !default;  // was false
-$enable-gradients:          true !default;  // was false
-$enable-transitions:        true !default;  // was false
-$enable-hover-media-query:  true !default;  // was false
-```
-The other two modifications change what the framework considers to be a small sized screen so that a large smartphone in landscape mode won't be forced to make use of the collapsing menu system in the navbar.
-
-```
-$grid-breakpoints: (
-  // Extra small screen / phone
-  xs: 0,
-  // Small screen / phone
-  sm: 480px,                                // was 544
-  // Medium screen / tablet
-  md: 768px,
-  // Large screen / desktop
-  lg: 992px,
-  // Extra large screen / wide desktop
-  xl: 1200px
-) !default;
-
-// Grid containers
-//
-// Define the maximum width of `.container` for different screen sizes.
-
-$container-max-widths: (
-  sm: 434px,                               // was 576
-  md: 720px,
-  lg: 940px,
-  xl: 1140px
-) !default;
+### build files
+```bash
+# development
+npm run build:dev
+# production
+npm run build:prod
 ```
 
-You will find two files named `_variables-ORIGINAL.scss` and `_variables-CUSTOM.scss` in the same folder that will allow you to compare and easily copy the default and custom settings over top of `_variables.scss`.
-
-## Building Bootstrap 4
-
-Once you have it customized, you can use the main project's Grunt setup to build Bootstrap 4 and to copy the needed CSS and JS files into the main A2B4O2OM application.  The build command to run is:
-
-```
-grunt bootstrap
+### watch and build files
+```bash
+npm run watch
 ```
 
-Once complete, you will see any modifications you made to `/bootstrap/scss/_variables.scss` (or elsewhere) reflected in `/src/lib/bootstrap/bootstrap.js` and `/src/css/bootstrap.css` where Webpack will pick them up.
+### run tests
+```bash
+npm run test
+```
+
+### run webdriver (for end-to-end)
+```bash
+npm run webdriver:update
+npm run webdriver:start
+```
+
+### run end-to-end tests
+```bash
+# make sure you have webdriver running and a sever for the client app
+npm run e2e
+```
+
+# Contributing
+You can include more examples as components but they must introduce a new concept such as `Home` component (separate folders), and Todo (services). I'll accept pretty much everything so feel free to open a Pull-Request
+
+# TypeScript
+> To take full advantage of TypeScript with autocomplete you would have to install it globally and use an editor with the correct TypeScript plugins.
+
+## Use latest TypeScript compiler
+TypeScript 1.7.x includes everything you need. Make sure to upgrade, even if you installed TypeScript previously.
+
+```
+npm install --global typescript
+```
+
+## Use a TypeScript-aware editor
+We have good experience using these editors:
+
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [Webstorm 10](https://www.jetbrains.com/webstorm/download/)
+* [Atom](https://atom.io/) with [TypeScript plugin](https://atom.io/packages/atom-typescript)
+* [Sublime Text](http://www.sublimetext.com/3) with [Typescript-Sublime-Plugin](https://github.com/Microsoft/Typescript-Sublime-plugin#installation)
+
+# Frequently asked questions
+* What's the current browser support for Angular 2 Beta?
+  * Please view the updated list of [browser support for Angular 2](https://github.com/angularclass/awesome-angular2#current-browser-support-for-angular-2)
+* Why is my service, aka provider, is not injecting parameter correctly?
+  * Please use `@Injectable()` for your service for typescript to correctly attach the metadata (this is a TypeScript problem)
+* How do I run protractor with node 0.12.x?
+  * please check out this repo to use the old version of protractor [#146](https://github.com/AngularClass/angular2-webpack-starter/pull/146/files)
+* Where do I write my tests?
+  * You can write your tests next to your component files. See [`/src/app/home/home.spec.ts`](/src/app/home/home.spec.ts)
+* How do I start the app when I get `EACCES` and `EADDRINUSE` errors?
+  * The `EADDRINUSE` error means the port `3000` is currently being used and `EACCES` is lack of permission for webpack to build files to `./dist/`
+* How to use `sass` for css?
+ * `loaders: ['raw-loader','sass-loader']` and `@Component({ styles: [ require('./filename.scss') ] })` see issue [#136](https://github.com/AngularClass/angular2-webpack-starter/issues/136)
+* How do I test a Service?
+ * See issue [#130](https://github.com/AngularClass/angular2-webpack-starter/issues/130#issuecomment-158872648)
+* How do I add `vscode-chrome-debug` support?
+ * The VS Code chrome debug extension support can be done via `launch.json` see issue [#144](https://github.com/AngularClass/angular2-webpack-starter/issues/144#issuecomment-164063790)
+* How do I make the repo work in a virtual machine?
+ * You need to use `0.0.0.0` so revert these changes [#205](https://github.com/AngularClass/angular2-webpack-starter/pull/205/files)
+* What are the naming conventions for Angular 2?
+ * please see issue [#185](https://github.com/AngularClass/angular2-webpack-starter/issues/185) and PR [196](https://github.com/AngularClass/angular2-webpack-starter/pull/196)
+* How do I include bootstrap or jQuery?
+ * please see issue [#215](https://github.com/AngularClass/angular2-webpack-starter/issues/215) and [#214](https://github.com/AngularClass/angular2-webpack-starter/issues/214#event-511768416)
+
+
+# Support, Questions, or Feedback
+> Contact us anytime for anything about this repo or Angular 2
+
+* [Chat: AngularClass.slack](http://angularclass.com/member-join/)
+* [Twitter: @AngularClass](https://twitter.com/AngularClass)
+* [Gitter: AngularClass/angular2-webpack-starter](https://gitter.im/angularclass/angular2-webpack-starter)
+
+___
+
+enjoy — **AngularClass**
+
+<br><br>
+
+[![AngularClass](https://cloud.githubusercontent.com/assets/1016365/9863770/cb0620fc-5af7-11e5-89df-d4b0b2cdfc43.png  "Angular Class")](https://angularclass.com)
+##[AngularClass](https://angularclass.com)
+> Learn AngularJS, Angular 2, and Modern Web Development from the best.
+> Looking for corporate Angular training, want to host us, or Angular consulting? patrick@angularclass.com
+
+# License
+ [MIT](/LICENSE)
