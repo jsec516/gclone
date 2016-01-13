@@ -73,17 +73,18 @@ gulp.task('angular2', function(){
 
 gulp.task('play', ['clean', 'ts2js', 'html', 'assets'], function () {
     console.log("dist is ready");
-    // var http = require('http');
-    // var connect = require('connect');
-    // var serveStatic = require('serve-static');
+    var http = require('http');
+    var connect = require('connect');
+    var serveStatic = require('serve-static');
     // var open = require('open');
 
-    // var port = 9000, app;
+    var port = 9000, app;
 
     // gulp.watch(PATHS.src, ['ts2js']);
 
-    // app = connect().use(serveStatic(__dirname));
-    // http.createServer(app).listen(port, function () {
-    //     open('http://localhost:' + port);
-    // });
+    app = connect().use(serveStatic(__dirname));
+    http.createServer(app).listen(port, function () {
+        console.log('server is ready at http://localhost:',port);
+        // open('http://localhost:' + port);
+    });
 });
