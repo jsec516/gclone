@@ -1,0 +1,39 @@
+<div class="compose {{minimizeClass}} clearfix" [ngClass]="isOpen?'show':'hide'">
+    <div class="first">
+        <h4>New Messege</h4>
+        <i class="fa fa-times"></i>
+        <i class="fa fa-plane"></i>
+        <i (click)="minimize()" class="fa fa-minus"></i>
+    </div>
+    <div class="main clearfix">
+        <h4> To</h4>
+        <input class="just" type="text" name="to" value="" />
+    </div>
+    <div class="main2 clearfix">
+        <h3>From</h3>
+        <input class="form" type="text" name="form" />
+    </div>
+    <div class="sub">
+        <h3>Subject</h3>
+        <textarea></textarea>
+    </div>
+    <div class="bottom clearfix">
+        <div class="bottom-left">
+            <button class="one" type="button">Sent</button>
+
+            <i class="how fa fa-paperclip"></i>
+            <div class="ho">
+            </div>
+            <i class="fa fa-camera-retro"></i>
+            <i class="fa fa-microphone"></i>
+            <i class="fa fa-info-circle"></i>
+            <i class="fa fa-moon-o"></i>
+        </div>
+        <div class="bottom-right">
+            <i class="low1 fa fa-trash-o"></i>
+            <div class="yes">
+            </div>
+            <i class="low fa fa-caret-down"></i>
+        </div>
+    </div>
+</div>

@@ -99,7 +99,10 @@ module.exports = {
 
             // support for .html as raw text
             { test: /\.html$/, loader: 'raw-loader' },
-      
+            
+            // support for image loading
+            {test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}, // inline base64 URLs for <=8k images, direct URLs for the rest
+            
             // support for bootstrap font
             {
                 test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/,

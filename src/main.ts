@@ -5,7 +5,7 @@ import {provide} from 'angular2/core';
 import {bootstrap, ELEMENT_PROBE_PROVIDERS} from 'angular2/platform/browser';
 import {ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2/router';
 import {HTTP_PROVIDERS} from 'angular2/http';
-
+import {COMMON_DIRECTIVES} from 'angular2/common';
 /*
  * App Component
  * our top level component that holds all of our components
@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function main() {
     ...('production' === process.env.ENV ? [] : ELEMENT_PROBE_PROVIDERS),
     ...HTTP_PROVIDERS,
     ...ROUTER_PROVIDERS,
+    ...COMMON_DIRECTIVES,
     provide(LocationStrategy, { useClass: HashLocationStrategy })
   ])
   .catch(err => console.error(err));

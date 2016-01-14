@@ -1,5 +1,7 @@
 // css
 require('./assets/lib/bootstrap/less/bootstrap.less');
+require('./assets/css/style.css');
+
 // Polyfills
 import 'es6-shim';
 // (these modules are what are in 'angular2/bundles/angular2-polyfills' so don't use that here)
@@ -30,3 +32,5 @@ import 'angular2/core';
 import 'rxjs';
 
 // Other vendors for example jQuery, Lodash, angular2-jwt
+require('./assets/lib/bootstrap/jquery-1.11.3.min.js');
+require('imports?jQuery=jquery!./assets/lib/bootstrap/bootstrap.min.js');

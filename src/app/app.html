@@ -79,7 +79,7 @@
     </div>
     <div class="row">
         <div class="col-sm-2 left-side">
-            <h5><a href="">COMPOSE</a></h5>
+            <h5><a href="" (click)="showCompose($event)">COMPOSE</a></h5>
             <div class="left-menu">
                 <ul style="list-style:none; padding-left:0px;">
                     <li class="inbox-group inbox"><a href="">Inbox (18)</a> <span class="drop-arrow"></span></li>
@@ -113,3 +113,4 @@
     </div>
     
 </div>
+<compose [isOpen]="composeStatus"></compose>
