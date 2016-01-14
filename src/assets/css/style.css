@@ -280,6 +280,9 @@ button#dropdownMenu1 {
     background-color: #d14836;
     text-decoration:none;
 }
+.left-side h5 a:visited, a:focus{
+    text-decoration:none;
+}
 .left-menu li{
    padding-bottom: 3px;
     padding-top: 4px;
@@ -541,6 +544,7 @@ button#dropdownMenu1 {
     padding: 4px 7px;
     float: right;
     border: 1px solid rgba(158, 158, 158, 0);
+    cursor: pointer;
 }
 .first i:hover{
     background-color:#9E9E9E;
@@ -588,7 +592,7 @@ button#dropdownMenu1 {
     padding-left: 23px;
     padding-top: 3px;
     font-weight: 200;
-    font-size: 14px;
+    font-size: 13px;
 }
 .main2 .form{
     width: 360px;
@@ -600,20 +604,34 @@ button#dropdownMenu1 {
 
 }
 .sub{
-border-left:1px solid rgba(158, 158, 158, 0.35);   
-border-right:1px solid rgba(158, 158, 158, 0.35);
+    border-left:1px solid rgba(158, 158, 158, 0.35);   
+    border-right:1px solid rgba(158, 158, 158, 0.35);
 }
-.sub h3{
-    color: #9E9E9E;
-    padding-left: 23px;
+.subject{
     border-top:1px solid rgba(158, 158, 158, 0.28);
     border-bottom: 1px solid rgba(158, 158, 158, 0.28);
-    padding-top: 8px;
-    padding-bottom: 8px;   
-    margin:0px;
-    font-weight: 300;
-    font-family: arial,sans-serif;
+}
+.subject h4{
+    color:#9E9E9E;
+    float: left;
+    padding-left: 23px;
+    padding-top: 3px;
+    font-weight: 200;
+    font-size: 13px;
+    
+}
+.subject .form{
+    width: 360px;
+    height: 23px;
+    margin-top: 9px;
+    border: 0px;
+    margin-left: 10px;
     font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.sub h3{
+    
 }
 .bottom-left{
    float:left; 
@@ -689,11 +707,19 @@ border-right:1px solid rgba(158, 158, 158, 0.35);
 .sub textarea{
     display: block;
     width: 97%;
-    height: 307px;
+    height: 283px;
     font-size: larger;
     border:0px;
+    
 }
-
-
-
-
+.minimized{
+    height: 40px;
+    width: 300px;
+}
+.minimized .main, minimized .main2, minimized .sub, minimized .bottom{
+    display: none;
+}
+.minimized .first{
+    height: 40px;
+    width: 300px;
+}

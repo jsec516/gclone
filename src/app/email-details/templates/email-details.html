@@ -1,0 +1,56 @@
+<div *ngIf="email" class="row">
+    <div class="col-sm-9 gmail-heading">
+        <h3>{{email.subject}}</h3>
+    </div>
+    <div class="col-sm-3">
+
+    </div>
+</div>
+<div *ngIf="email" class="row">
+    <div class="col-sm-9">
+        <div class="row">
+            <div class="col-sm-8 left-header">
+                <span class="user"> <i class="material-icons">perm_identity</i></span>
+                <h5><strong>{{email.from}}</strong> &lt;noreply@updates.freelancer.com&gt; <a>Unsubscribe</a></h5>
+                <label>to me<i class="fa fa-caret-down"></i></label>
+            </div>
+            <div class="col-sm-4 right-header">
+                <label>Dec 17 (13 days ago)</label>
+                <span><i class="fa fa-star-o"></i></span>
+                <i class="material-icons">reply</i>
+                <i class="fa fa-caret-down down-icon"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+
+    </div>
+</div>
+<div *ngIf="email" class="row description-email">
+    {{email.body}}
+</div>
+<div class="row footer">
+    <div class="col-sm-9">
+        <div class="row">
+            <div class="col-sm-12 input-container">
+                <div class="input-icon">
+
+                </div>
+                <input class="reply-forward" type="text" value="Click here to Reply or Forward" />
+            </div>
+        </div>
+        <div class="row footer-section">
+            <div class="col-sm-4">
+                <p>0.09 GB (0%) of 15 GB used</p>
+                <a href="">Manage</a>
+            </div>
+            <div class="col-sm-4 middle-side">
+                <p> <a href="">terms</a> - <a href="">privacy</a></p>
+            </div>
+            <div class="col-sm-4 right-side">
+                <p> Last account activity: 18 minutes ago</p>
+                <a href="">Details</a>
+            </div>
+        </div>
+    </div>
+</div>

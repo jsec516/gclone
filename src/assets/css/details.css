@@ -1,0 +1,153 @@
+.button-menu{
+    padding-bottom: 10px;
+}
+.refresh-icon.return-icon{
+    margin-left:0px;
+}
+.gmail-heading{
+    border-bottom: 1px solid #e5e5e5;
+    padding-left: 0px;
+    margin-left: 15px; 
+}
+.gmail-heading h3{
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+.left-header{
+  margin-top:10px;  
+}
+
+.left-header .user{
+    border: 1px solid #ddd;
+    padding: 1px 5px 5px 5px;
+    background-color: #f1f1f1;
+    border-radius: 2px;
+    float: left;
+    margin-right:10px;
+}
+.left-header .user i{
+    vertical-align: middle;
+    font-size:18px;
+    color: gray;
+}
+.left-header h5{
+   padding-left: 10px;
+   font-size:13px;
+   margin-top:3px;
+   margin-bottom:0px;
+}
+.left-header h5 a{
+    color: #777;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.left-header label{
+   font-size: 13px;
+   font-weight: normal; 
+   color: #777;
+}
+.left-header label i{
+    margin-left: 10px;
+    border: 1px solid #ddd;
+    padding: 1px 2px 0px 2px;
+    border-radius: 1px;
+    font-size:11px;
+}
+.right-header{
+    margin-top: 5px;
+    padding-right: 0px;
+    padding-left: 50px;
+}
+.right-header label{
+    font-size: 13px;
+    vertical-align: top;
+    padding-top: 5px;
+    font-weight: normal;
+}
+.right-header i{
+    border: 1px solid #ddd;
+    background-color: #f1f1f1;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    padding: 4px 14px;
+    font-size: 18px;
+    color: gray;
+    vertical-align: middle;
+}
+.right-header span i{
+    border: 0px;
+    background-color: #fff;
+    font-size: 15px;
+    padding: 0px 4px;
+}
+.right-header i:hover{
+    color: black;
+}
+.right-header .down-icon{
+    margin-left: -6px;
+    padding: 7px 6px;
+    font-size:12px;
+   
+}
+.description-email{
+    height:200px;
+    /*background-color:#ddd;*/
+    padding: 5px;
+    margin-left:0px;
+}
+.input-container{
+        padding-right: 0px;
+}
+
+.input-container .input-icon{
+    background: url("../images/photo.jpg");
+    height: 31px;
+    width: 29px;
+    display: inline-block;
+    margin-top:10px;
+    margin-right: 7px;
+}
+.input-container input{
+    vertical-align: top;
+    height: 85px;
+    width: 95%;
+    margin-top: 10px;
+    color: #999;
+    font-size: 13px;
+    border: 1px solid #ddd;
+}
+.footer-section{
+    padding-top: 20px;
+    text-transform: capitalize;
+}
+.footer-section p{
+    font-size: 11px;
+    font-weight: bold;
+    margin: 0px;
+}
+.footer-section a{
+    color: #333;
+    font-size: 11px;
+    text-decoration: underline;
+}
+.middle-side{
+    padding:0px;
+    text-align: center;
+}
+.right-side{
+    text-align:right;
+    padding:0px;
+}
+
+
+
+
+
+
+
+
+
+
+

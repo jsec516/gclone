@@ -30,7 +30,7 @@ export class ComposeComponent implements OnInit {
     }
 
     minimize() {
-        this.minimizeClass = 'minimize';
+        this.minimizeClass = 'minimized';
         console.log('minimzed');
     }
 }

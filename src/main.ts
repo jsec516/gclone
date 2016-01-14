@@ -11,6 +11,7 @@ import {COMMON_DIRECTIVES} from 'angular2/common';
  * our top level component that holds all of our components
  */
 import {App} from './app/app';
+import {EmailService} from './app/services/email.service';
 /*
  * Bootstrap our Angular app with a top level component `App` and inject
  * our Services and Providers into Angular's dependency injection
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function main() {
     ...HTTP_PROVIDERS,
     ...ROUTER_PROVIDERS,
     ...COMMON_DIRECTIVES,
+    EmailService,
     provide(LocationStrategy, { useClass: HashLocationStrategy })
   ])
   .catch(err => console.error(err));

@@ -19,7 +19,7 @@ export class Email {
 @Injectable()
 export class EmailService {
     _http: Http;
-
+    count: number = 0;
     constructor(http: Http) {
         this._http = http;
     }
@@ -29,6 +29,8 @@ export class EmailService {
     }
 
     getEmailById(id: string) {
+        console.log('fired', this.count);
+        this.count++;
         return this._http.get('./emails.json').map(res => res.json())
             .map((tasks: Array<any>) => {
                 let result: Array<any> = [];

@@ -1,0 +1,142 @@
+.main-container{
+    width: 600px;
+    margin:0px auto;
+    padding-bottom:210px;
+}
+.main-body{
+    margin-bottom: 60px;
+}
+.logo-container{
+    background: url("../images/googlelogo.png")no-repeat;
+    height: 40px;
+    width: 112px;
+    margin:25px auto 20px 232px;
+    padding:0px;
+}
+.header h2{
+   text-align: center;
+   font-family: 'Open Sans', arial;
+   color: #555;
+   font-size:38px;
+   font-weight:300;
+   margin-top: 0px;
+}
+
+.sign-in-header h4{
+    font-size:18px;
+    text-align:center;
+    font-weight:400;
+    color: #555;
+    font-family: 'Open Sans', arial;
+    margin-bottom: 0px;
+}
+.sign-in-box{
+    background-color: #f7f7f7;
+    margin: 20px 105px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom:40px;
+}
+.user-logo{
+ margin-bottom: 15px;
+}
+.user-logo img{
+    margin-top:40px;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+}
+.user-name h4{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-align:center;
+    color: #404040;
+    margin-bottom: 2px;
+}
+.user-email{
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+}
+.sign-in-form input{
+   height: 40px;
+   border-radius: 0px;
+   margin-top: 10px;
+}
+.sign-in-form button{
+    margin-top: 10px;
+    height: 35px;
+    border-radius: 2px;
+    width: 280px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    border: 1px solid #3079ed;
+    color: #fff;
+    margin-bottom: 10px;
+    text-shadow: 0 1px rgba(0,0,0,0.3);
+    background-color: #4d90fe;
+    background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+}
+.sign-in-form button:hover{
+    border: 1px solid #2f5bb7;
+    color: #fff;
+    text-shadow: 0 1px rgba(0,0,0,0.3);
+    background-color: #357ae8;
+    background-image: -webkit-linear-gradient(top,#4d90fe,#357ae8);
+}
+.sign-in-form a{
+    color: #427fed;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 13px;
+}
+.sign-in-form a:hover{
+    text-decoration: underline;
+}
+.different-account-link{
+    padding-bottom: 25px;
+}
+.different-account-link a{
+    color: #427fed;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    text-align:center;
+    
+}
+.different-account-link a:hover{
+    text-decoration: underline;
+}
+.logo-strip{
+    background: url("../images/wlogostrip_230x17_1x.png")no-repeat;
+    background-size: 230px 17px;
+    width: 230px;
+    height: 17px;
+    margin: 10px auto;
+}
+.footer{
+    border-top: 1px solid #e5e5e5;
+}
+.left-side{
+   padding-left: 40px;
+}
+.left-side li{
+    float: left;
+    list-style:none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.left-side li a{
+    color: #737373;
+    font-size: 11px;
+    margin-right: 20px;
+}
+

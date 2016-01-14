@@ -5,12 +5,11 @@
 import {Component, OnInit}     from 'angular2/core';
 import {RouteConfig, RouterOutlet, Router} from 'angular2/router';
 
-import {Email, EmailService}  from '../services/email.service';
+import {Email, EmailService}  from '../../services/email.service';
 
 @Component({
     template: require('../templates/inbox.html'),
-    directives: [RouterOutlet],
-    providers: [EmailService],
+    directives: [RouterOutlet]
 })
 export class InboxComponent implements OnInit {
 
@@ -27,6 +26,6 @@ export class InboxComponent implements OnInit {
     }
 
     onSelect(email: Email) {
-        this._router.navigate(['EmailDetail', { id: email.id }]);
+        this._router.navigate(['Details', { id: email.id }]);
     }
 }
