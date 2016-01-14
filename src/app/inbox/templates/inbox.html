@@ -10,7 +10,7 @@
     <div class="col-sm-12 tab-content">
         <div role="tabpanel" class="row tab-pane active" id="primary">
             <div class="col-sm-12">
-                <div *ngFor="#email of emails" class="row primary-section-row">
+                <div *ngFor="#email of emails" (click)="onSelect(email)" class="row primary-section-row">
                     <div class="col-sm-1 left-icon">
                         <i class="material-icons">check_box_outline_blank</i>
                         <i class="fa fa-star-o star"></i>
@@ -18,7 +18,7 @@
                         <i *ngIf="!email.isImportant" class="material-icons outline-icon">label_outline</i>
                     </div>
                     <div class="col-sm-2 freelancer">
-                        <h5 class="awesome"><a (click)="onSelect(email)">{{ email.from }}</a></h5>
+                        <h5 class="awesome"><a >{{ email.from }}</a></h5>
                     </div>
                     <div class="col-sm-8 email-text">
                         <h5>{{ email.subject }}</h5>

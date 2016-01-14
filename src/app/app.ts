@@ -28,7 +28,7 @@ export class App {
     name = 'Angular 2 Webpack Starter';
     url = 'https://twitter.com/AngularClass';
     composeStatus = false;
-    constructor(private location:Location) {
+    constructor(private location: Location) {
         console.log('in app', this.location.path());
     }
 
