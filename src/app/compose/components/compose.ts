@@ -19,17 +19,17 @@ export class ComposeComponent implements OnInit {
     // public emails: Email[];
     @Input() isOpen: string;
     minimizeClass: string = '';
-    
+
     constructor(
         private _router: Router,
         private _service: ComposeService
     ) { }
 
     ngOnInit() {
-        console.log(this.isOpen)
+        // console.log(this.isOpen);
     }
-    
-    minimize(){
+
+    minimize() {
         this.minimizeClass = 'minimize';
         console.log('minimzed');
     }

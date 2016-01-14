@@ -13,25 +13,25 @@ import {ComposeComponent} from './compose/components/compose';
  * Top Level Component
  */
 @Component({
-  selector: 'app',
-  directives: [ ...ROUTER_DIRECTIVES, ComposeComponent ],
-  template: require('./app.html')
+    selector: 'app',
+    directives: [...ROUTER_DIRECTIVES, ComposeComponent],
+    template: require('./app.html')
 })
 @RouteConfig([
-  { path: '/', component: InboxComponent, name: 'Default' },
-  { path: '/**', redirectTo: ['Default'] }
+    { path: '/', component: InboxComponent, name: 'Default' },
+    { path: '/**', redirectTo: ['Default'] }
 ])
 export class App {
-  name = 'Angular 2 Webpack Starter';
-  url = 'https://twitter.com/AngularClass';
-  composeStatus=false;
-  constructor() {
+    name = 'Angular 2 Webpack Starter';
+    url = 'https://twitter.com/AngularClass';
+    composeStatus = false;
+    constructor() {
 
-  }
-  
-  showCompose(event){
-      event.preventDefault();
-      this.composeStatus=true;
-      console.log('fired');
-  }
+    }
+
+    showCompose(event) {
+        event.preventDefault();
+        this.composeStatus = true;
+        console.log('fired');
+    }
 }

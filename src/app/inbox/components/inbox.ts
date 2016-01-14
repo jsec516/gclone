@@ -23,7 +23,7 @@ export class InboxComponent implements OnInit {
 
     ngOnInit() {
         this.emails = [];
-        this._service.getEmails().subscribe(emails => { this.emails = emails });
+        this._service.getEmails().subscribe(emails => { this.emails = emails; });
     }
 
     onSelect(email: Email) {
